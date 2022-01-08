@@ -12,6 +12,10 @@ var port = chrome.extension.connect({
     name: "connectionn"
 });
 
+document.getElementById("show-gr").onclick = () => {
+    document.getElementById("inputs").style.display="flex"
+}
+
 //sending msg through port
 document.getElementById("draggable").onclick = () => {
     msg.sketch = false;
@@ -24,14 +28,19 @@ document.getElementById("sketch").onclick = () => {
     port.postMessage(msg);
 }
 document.getElementById('gr').onclick = () => {
-    msg.grid = !msg.grid;
+    msg.grid = true;
     var row = document.getElementById("row").value;
     var col = document.getElementById("col").value;
-    // if(row!=""||col!=""){
-    //     msg.row=row;
-    //     msg.col=col;
-    // }
+    if(row!=""||col!=""){
+        msg.row=row;
+        msg.col=col;
+    }
+    document.getElementById("inputs").style.display="none"
     port.postMessage(msg);
 }
-document.body.style.width = "1000px";
-document.body.style.height = "1000px";
+
+document.getElementById('remove-gr').onclick = () => {
+    msg.grid = false;
+    document.getElementById("inputs").style.display="none"
+    port.postMessage(msg);
+}

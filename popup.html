@@ -17,9 +17,9 @@
 <body>
     <div class="main_body">
         
-        <button id="draggable">Drag</button>
-        <button id="sketch">Draw</button>
-        <button id="gr">Grid</button>
+        <button id="draggable"><b>Drag</b></button>    
+        <button id="sketch"><b>Draw</b></button>
+        <button id="show-gr"><b>Grid</b></button>
         <!-- <button id="todo"></button> -->
     </div>
 
@@ -39,14 +39,22 @@
                 </ul>
             </div>
         </div>
-        <div class="list" id="list1">
-            <ul></ul>
+    </div>
+
+    <div id="inputs">
+        <div class="item">
+            <h5>Rows</h5>
+            <input type="text" value="1" id="row">
+        </div>
+        <div class="item">
+            <h5>Column</h5>
+            <input type="text" value="1" id="col">
+        </div>
+        <div  class="bt" style="display: flex;">
+            <button class="gr-btn" id="gr">Apply</button>
+            <button class="gr-btn" id="remove-gr">Remove</button>
         </div>
     </div>
-  
-    
-    
-    <div class="alan-btn"></div>
 </body>
 <script  src="./model.js"></script>
 <script src="./Extensions/Todo/to-do.js"></script>
