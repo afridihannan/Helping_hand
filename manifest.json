@@ -10,7 +10,7 @@
         {
             "matches":["http://*/*","https://*/*"],
             "run_at":"document_end",
-            "js":["./jquery-ui-1.12.1/jquery-3.6.0.js","./jquery-ui-1.12.1/jquery-ui.js","features.js"],
+            "js":["./jquery-ui-1.12.1/jquery-3.6.0.js","./Extensions/sketch/p5.js","./Extensions/sketch/p5.dom.js","./jquery-ui-1.12.1/jquery-ui.js","features.js"],
             "css":[
                 "./jquery-ui-1.12.1/jquery-ui.css",
                 "./jquery-ui-1.12.1/jquery-ui.structure.css",
